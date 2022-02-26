@@ -7,3 +7,14 @@ build:
         code: |
           echo "node version $(node -v) running"          
           echo "npm version $(npm -v) running"
+build-docker-and-push-to-acr:
+  steps:
+    - internal/docker-build:
+      dockerfile: Dockerfile
+      image-name: credit-bill-frontend
+    - internal/docker-push:
+        image-name: credit-bill-frontend
+        username: $USERNAME
+        password: $PASSWORD
+        registry: isurupathumherath.azurecr.io
+        repository: $USERNAME/credit-bill-frontend
