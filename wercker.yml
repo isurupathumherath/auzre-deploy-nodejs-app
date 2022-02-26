@@ -17,4 +17,4 @@ build-docker-and-push-to-acr:
         username: $USERNAME
         password: $PASSWORD
         registry: isurupathumherath.azurecr.io
-        repository: $USERNAME/credit-bill-frontend
+        repository: $USERNAME/credit-bill-frontend 
